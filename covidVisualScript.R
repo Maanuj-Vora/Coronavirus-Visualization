@@ -1,83 +1,29 @@
----
-title: "COVID-19 Visualization"
-author: "Maanuj Vora"
-date: "9/15/2020"
-output: pdf_document
----
+#install.packages("tidyverse")
+#install.packages("ggplot2")
+#install.packages("hrbrthemes")
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Coronavirus Data Visualization
-
----
-
-### Data Source
-
-Let's get this out of the way. 
-
-For this project, I will be referencing data from **[Many-Api](https://github.com/Maanuj-Vora/Many-Api)** which sources its data from **[Our World in Data](https://ourworldindata.org/coronavirus)**
-
----
-
-### Install/Import Packages/Libraries
-
-```{r}
-install.packages("tidyverse")
-install.packages("ggplot2")
-install.packages("hrbrthemes")
-```
-
-```{r}
 library(ggplot2)
 library(hrbrthemes)
-```
 
+setwd(dirname(sys.frame(1)$ofile))
 
----
-
-### Retrieve Data
-
-```{r}
 fileUrl <- "https://raw.githubusercontent.com/Maanuj-Vora/Many-Api/master/data/csv/coronavirus.csv"
 covidData <- read.table(fileUrl, header=TRUE, sep="|")
 head(covidData)
-```
-
----
-
-### Split Data by iso_code
-
-```{r}
 
 iso_codes <- covidData$iso_code
 iso_codes <- unique(iso_codes)
 iso_codes <- as.vector(iso_codes)
 
-```
-
----
-
-### Create Directories for Data
-
-```{r}
 dir.create("data", showWarnings = FALSE)
 setwd("data")
+
 for(iso in iso_codes){
   if(!dir.exists(iso)){
     dir.create(iso, showWarnings = FALSE)
   }
 }
-setwd("..")
-```
 
----
-
-### Plotting and Saving Data
-
-```{r}
-setwd("data")
 for(iso in iso_codes){
   setwd(iso)
 
@@ -113,21 +59,26 @@ for(iso in iso_codes){
   png(outputFile)
   print(totalCases)
   dev.off()
+  
   outputFile = sprintf("%s.png", "newCases")
   png(outputFile)  
   print(newCases)
   dev.off()
+  
   outputFile = sprintf("%s.png", "totalDeaths")
   png(outputFile)  
   print(totalDeaths)
   dev.off()
+  
   outputFile = sprintf("%s.png", "newDeaths")
   png(outputFile) 
   print(newDeaths)
   dev.off()
   
-  Sys.sleep(1)
-  
   setwd("..")
 }
-```
+
+setwd("..")
+
+
+
