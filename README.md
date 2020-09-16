@@ -3,6 +3,13 @@ Coronavirus Data Visualization
 
 ------------------------------------------------------------------------
 
+![Me Daily
+Images](https://github.com/Maanuj-Vora/Coronavirus-Visualization/workflows/Me%20Daily%20Images/badge.svg)
+![README If You
+Can](https://github.com/Maanuj-Vora/Coronavirus-Visualization/workflows/README%20If%20You%20Can/badge.svg)
+
+------------------------------------------------------------------------
+
 ### Data Source
 
 Let’s get this out of the way.
