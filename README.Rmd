@@ -2,11 +2,13 @@
 title: "COVID-19 Visualization"
 author: "Maanuj Vora"
 date: "9/15/2020"
-output: pdf_document
+output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+print_yaml <- function(filename) {
+  cat("```yaml", readLines(filename), "```", sep = "\n")
+}
 ```
 
 ## Coronavirus Data Visualization
