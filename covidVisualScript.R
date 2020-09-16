@@ -15,8 +15,8 @@ iso_codes <- as.vector(iso_codes)
 iso_codes <- sort(iso_codes)
 iso_codes <- iso_codes[iso_codes!=""]
 
-dir.create("data", showWarnings = FALSE)
-setwd("data")
+dir.create("docs", showWarnings = FALSE)
+setwd("docs")
 
 for(iso in iso_codes){
   if(!dir.exists(iso)){

@@ -65,8 +65,8 @@ iso_codes
 ### Create Main Directory for Data
 
 ```{r}
-dir.create("data", showWarnings = FALSE)
-setwd("data")
+dir.create("docs", showWarnings = FALSE)
+setwd("docs")
 ```
 
 ---
@@ -74,7 +74,7 @@ setwd("data")
 ### Plotting and Saving Data
 
 ```{r}
-setwd("data")
+setwd("docs")
 for(iso in iso_codes){
   if(!dir.exists(iso)){
     dir.create(iso, showWarnings = FALSE)
