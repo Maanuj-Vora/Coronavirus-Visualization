@@ -1,11 +1,9 @@
-# install.packages("tidyverse")
+install.packages("tidyverse")
 install.packages("ggplot2")
 install.packages("hrbrthemes")
 
 library(ggplot2)
 library(hrbrthemes)
-
-setwd(dirname(sys.frame(1)$ofile))
 
 fileUrl <- "https://raw.githubusercontent.com/Maanuj-Vora/Many-Api/master/data/csv/coronavirus.csv"
 covidData <- read.table(fileUrl, header=TRUE, sep="|")
