@@ -75,6 +75,8 @@ for(iso in iso_codes){
   print(newDeaths)
   dev.off()
   
+  print(iso)
+  
   setwd("..")
 }
 
