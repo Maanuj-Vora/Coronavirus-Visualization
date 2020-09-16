@@ -1,6 +1,6 @@
-#install.packages("tidyverse")
-#install.packages("ggplot2")
-#install.packages("hrbrthemes")
+# install.packages("tidyverse")
+# install.packages("ggplot2")
+# install.packages("hrbrthemes")
 
 library(ggplot2)
 library(hrbrthemes)

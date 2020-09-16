@@ -24,14 +24,16 @@ For this project, I will be referencing data from **[Many-Api](https://github.co
 ### Install/Import Packages/Libraries
 
 ```{r}
-install.packages("tidyverse")
-install.packages("ggplot2")
-install.packages("hrbrthemes")
+# install.packages("tidyverse")
+# install.packages("ggplot2")
+# install.packages("hrbrthemes")
 ```
 
 ```{r}
 library(ggplot2)
 library(hrbrthemes)
+
+# setwd(dirname(sys.frame(1)$ofile))
 ```
 
 
@@ -125,8 +127,6 @@ for(iso in iso_codes){
   png(outputFile) 
   print(newDeaths)
   dev.off()
-  
-  Sys.sleep(1)
   
   setwd("..")
 }
