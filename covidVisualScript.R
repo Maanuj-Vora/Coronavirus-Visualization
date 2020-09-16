@@ -12,6 +12,8 @@ head(covidData)
 iso_codes <- covidData$iso_code
 iso_codes <- unique(iso_codes)
 iso_codes <- as.vector(iso_codes)
+iso_codes <- sort(iso_codes)
+iso_codes <- iso_codes[iso_codes!=""]
 
 dir.create("data", showWarnings = FALSE)
 setwd("data")
