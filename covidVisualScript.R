@@ -16,13 +16,16 @@ iso_codes <- as.vector(iso_codes)
 dir.create("data", showWarnings = FALSE)
 setwd("data")
 
+#for(iso in iso_codes){
+#  if(!dir.exists(iso)){
+#    dir.create(iso, showWarnings = FALSE)
+#  }
+#}
+
 for(iso in iso_codes){
   if(!dir.exists(iso)){
     dir.create(iso, showWarnings = FALSE)
   }
-}
-
-for(iso in iso_codes){
   setwd(iso)
 
   currentIso <- covidData[covidData[, "iso_code"] == iso,]
@@ -77,5 +80,3 @@ for(iso in iso_codes){
   
   setwd("..")
 }
-
-setwd("..")

@@ -18,7 +18,6 @@ jobs:
       - name: Install Required Packages
         run: Rscript -e 'install.packages(c("tidyverse","ggplot2", "hrbrthemes"))'
       - name: Run it
-#         run: R CMD BATCH covidVisualScript.R
         run: Rscript covidVisualScript.R
       - name: Commit files
         run: |
