@@ -2,7 +2,7 @@ name: Me Daily Images
 
 on:
   schedule:
-    - cron: "0 1,13 * * *"
+    - cron: "0 2 * * *"
 
 jobs:
   build:
