@@ -1,10 +1,8 @@
-
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
-
 name: Me Daily Images
 
-on: [push]
+on:
+  schedule:
+    - cron: "0 1,13 * * *"
 
 jobs:
   build:
