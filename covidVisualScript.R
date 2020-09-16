@@ -18,12 +18,6 @@ iso_codes <- iso_codes[iso_codes!=""]
 dir.create("data", showWarnings = FALSE)
 setwd("data")
 
-#for(iso in iso_codes){
-#  if(!dir.exists(iso)){
-#    dir.create(iso, showWarnings = FALSE)
-#  }
-#}
-
 for(iso in iso_codes){
   if(!dir.exists(iso)){
     dir.create(iso, showWarnings = FALSE)

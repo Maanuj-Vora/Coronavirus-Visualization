@@ -32,8 +32,6 @@ For this project, I will be referencing data from **[Many-Api](https://github.co
 ```{r}
 library(ggplot2)
 library(hrbrthemes)
-
-# setwd(dirname(sys.frame(1)$ofile))
 ```
 
 
@@ -58,22 +56,17 @@ iso_codes <- unique(iso_codes)
 iso_codes <- as.vector(iso_codes)
 iso_codes <- sort(iso_codes)
 iso_codes <- iso_codes[iso_codes!=""]
+iso_codes
 
 ```
 
 ---
 
-### Create Directories for Data
+### Create Main Directory for Data
 
 ```{r}
 dir.create("data", showWarnings = FALSE)
 setwd("data")
-for(iso in iso_codes){
-  if(!dir.exists(iso)){
-    dir.create(iso, showWarnings = FALSE)
-  }
-}
-setwd("..")
 ```
 
 ---
@@ -83,6 +76,9 @@ setwd("..")
 ```{r}
 setwd("data")
 for(iso in iso_codes){
+  if(!dir.exists(iso)){
+    dir.create(iso, showWarnings = FALSE)
+  }
   setwd(iso)
 
   currentIso <- covidData[covidData[, "iso_code"] == iso,]
