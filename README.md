@@ -16,6 +16,15 @@ Data](https://ourworldindata.org/coronavirus)**
 
 ### Usage
 
-Coming soon!
+You can embed the images found in the folders using the following URLs
+to obtain them
+
+    https://maanuj-vora.github.io/Coronavirus-Visualization/{ISO Code}/newCases.png
+
+    https://maanuj-vora.github.io/Coronavirus-Visualization/{ISO Code}/newDeaths.png
+
+    https://maanuj-vora.github.io/Coronavirus-Visualization/{ISO Code}/totalCases.png
+
+    https://maanuj-vora.github.io/Coronavirus-Visualization/{ISO Code}/totalDeaths.png
 
 ------------------------------------------------------------------------
