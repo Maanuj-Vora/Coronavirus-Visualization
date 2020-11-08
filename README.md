@@ -1,6 +1,8 @@
 Coronavirus Data Visualization
 ------------------------------
 
+Archived - Has now been combined with ![Many-Api](https://github.com/Maanuj-Vora/Many-Api)
+
 ------------------------------------------------------------------------
 
 ![Me Daily
